@@ -1,9 +1,13 @@
 import React, { PropTypes } from 'react';
 
+import HomePage from 'client/components/pages/Home/Home';
+
 
 class App extends React.Component {
     render() {
-        return <div>Hello, starter kit!</div>;
+        return (
+            <HomePage />
+        );
     }
 }
 
