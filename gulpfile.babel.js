@@ -44,6 +44,8 @@ gulp.task('webpack', () => {
 gulp.task('webpack-dev-server', () => {
     new WebpackDevServer(webpack(webpackConfig), {
         publicPath: webpackConfig.output.publicPath,
+        hot: true,
+        historyApiFallback: true,
     }).listen(port, 'localhost', err => {
         if (err) console.log(err);
         console.log(`Webpack dev server is running on port ${port}`);
